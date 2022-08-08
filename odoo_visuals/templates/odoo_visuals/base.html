@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <title>Odoo - Visuals: {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'link.css' %}"/>
+  </head>
+  <body>
+    <div id="contents">
+      <img src="{% static 'intel_logo.png' %}" width="100" height="100" id="logo"/>
+      <div id="main">
+        {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <div class="alert alert-success" role="alert">
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+              </div>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        <div id="mainmenu">
+          {% block menu %}
+          {% endblock %}
+        </div>
+        <div id="visuals">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
