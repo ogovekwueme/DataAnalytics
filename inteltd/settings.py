@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'odoo_visuals',
     'django_pandas',
     'django_matplotlib',
-    'matplotlib',
+    'django_chartjs',
+    
 ]
 
 MIDDLEWARE = [
