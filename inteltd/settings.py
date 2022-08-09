@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'odoo_visuals',
+    'django_pandas',
+    'django_matplotlib',
+    'matplotlib',
 ]
 
 MIDDLEWARE = [
